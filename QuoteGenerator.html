@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Quote Generator</title>
+</head>
+
+<body onLoad="newQuote()">
+	<div id="quoteDisplay">
+		<!--Quotes will display here -->
+	</div>
+<!-- Center added for button placement -->
+	
+	<button onClick="newQuote()">Quote me up!</button>
+<!--Javascript -->	
+<script type="text/javascript">
+	var quotes = ["quote 1", 
+				  "quote 2", 
+				  "quote 3",
+				 "quote 4",
+				 "quote 5",
+				 "quote 6",]
+	function newQuote() {
+		var randomNumber = Math.floor(Math.random() * (quotes.length));
+	document.getElementById('quoteDisplay').innerHTML=quotes[randomNumber];
+	}
+</script>
+</body>
+</html>

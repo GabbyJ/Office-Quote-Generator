@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Quote Generator</title>
+<style>
+	body {
+	background-color: #e5ebec;
+	font-family: itc-american-typewriter, serif;
+}
+
+h1 {
+	text-align: center;
+	font-size: 50px;
+}
+	h2{
+		text-align: center;
+	font-size: 30px;
+	}
+
+
+div {
+	margin: auto;
+    width: 60%;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.centerpic {
+	display: block;
+	margin: auto;
+	width: 50%;
+}
+
+
+
+button {
+	display: block;
+	margin: auto;
+	font-family: Helvetica;
+	font-weight: bold;
+	width: 250px;
+	height: 30px;
+	font-size: 15px;
+}
+</style>
+</head>
+<!--PLACE MY FONT HERE --><link rel="stylesheet" href="https://use.typekit.net/rre2nvs.css">
+	<!-- end font-->
+	
+<body onLoad="newQuote()">
+	<h2>Jim & Pam<br>a.k.a. Best couple ever</h2>
+	<!--image-->
+	<!--UPLOAD IMAGES TO image.ibb.co--><div><img src="https://image.ibb.co/hfwvN0/jimpam.png" alt="jim and pam" class="centerpic"></div>
+	
+	<!--end image-->
+	
+	<div id="quoteDisplay">
+		<!--Quotes will display here -->
+	</div>
+<!-- Center added for button placement -->
+	
+	<button onClick="newQuote()">Quote me up!</button>
+<!--Javascript -->	
+<script type="text/javascript">
+	var quotes = ["Pam: Do you want me to beat him up for ya? <br><br> Jim: No, I shouldn't have to ask you to do stuff like that. You should just do it.",
+				  "Jim about Pam: The boat was actually Plan C. The church was Plan B, and Plan A was marrying her a long, long time ago. Pretty much the day I met her.",
+				  "Jim: I just looked up from my  cereal. And I said, \"You know what I want to do today? I want to marry you.\"<br><br>Pam: I had just woken up. I didn't look cute. That's how I knew he meant it.",
+				  "Jim: You know what would energize me? If you Pamela Morgan Beesely-<br><br>Pam: Don't! Don't you dare! If you propose to me during a Michael meeting I will say no!<br><br>Jim: Well it's too late because I'm proposing...that you get me a cup of coffee.",
+				  "Jim: I'd say 1 in 6.<br><br>Pam: What?<br><br>Jim: I thought you asked me what our chances were of being murdered here tonight.",
+				  "Pam: I'm afraid I'm not enough for you.<br><br>Jim: Not enough for me? You are EVERYTHING."
+				  ]
+	function newQuote() {
+		var randomNumber = Math.floor(Math.random() * (quotes.length));
+	document.getElementById('quoteDisplay').innerHTML=quotes[randomNumber];
+	}
+</script>
+</body>
+</html>

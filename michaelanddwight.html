@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Quote Generator</title>
+<style>
+	body {
+	background-color: #e5ebec;
+	font-family: itc-american-typewriter, serif;
+}
+
+h2 {
+	text-align: center;
+	font-size: 30px;
+}
+
+
+div {
+	margin: auto;
+    width: 60%;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.centerpic {
+	display: block;
+	margin: auto;
+	width: 60%;
+}
+
+
+
+button {
+	display: block;
+	margin: auto;
+	font-family: Helvetica;
+	font-weight: bold;
+	width: 250px;
+	height: 30px;
+	font-size: 15px;
+}
+</style>
+</head>
+<!--PLACE MY FONT HERE --><link rel="stylesheet" href="https://use.typekit.net/rre2nvs.css">
+	<!-- end font-->
+	
+<body onLoad="newQuote()">
+	<h2>Michael and Dwight</h2>
+	<!--image-->
+	<!--UPLOAD IMAGES TO image.ibb.co--><div><img src="https://image.ibb.co/j5v0pf/mikedwight.png" alt="michael and dwight" class="centerpic"></div>
+	
+	<!--end image-->
+	
+	<div id="quoteDisplay">
+		<!--Quotes will display here -->
+	</div>
+<!-- Center added for button placement -->
+	
+	<button onClick="newQuote()">Quote me up!</button>
+<!--Javascript -->	
+<script type="text/javascript">
+	var quotes = ["Michael: The stress of my modern office has caused me to go into a depression.<br><br>Dwight: Depression? Isn't that just a fancy word for feeling bummed out?<br><br>Michael: Dwight, you ignorant slut.",
+				  "Michael: You respect dibs, don't you?<br><br>Dwight: I'm not a barbarian.",
+				  "Michael: Life is precious. And if I die, I want my son to know the dealio. The dealio of life. And remember, no matter what, I will always love you.<br><br>Dwight: What if he's a murderer?<br><br>Michael: He's not gonna be a murderer.<br><br>Dwight: Maybe that's how you die.",
+				  "Micahel: I would like your undivided attention, please.<br><br>Dwight: You couldn't handle my undivided attention.",
+				  "Michael: What's the difference between a salesman and a saleswoman?<br><br>Dwight: A saleswoman has a vagina.",
+				  "Michael: Dwight, what is your middle name?<br><br>Dwight: Danger."
+				  ]
+	function newQuote() {
+		var randomNumber = Math.floor(Math.random() * (quotes.length));
+	document.getElementById('quoteDisplay').innerHTML=quotes[randomNumber];
+	}
+</script>
+</body>
+</html>

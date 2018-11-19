@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Quote Generator</title>
+<style>
+	body {
+	background-color: #e5ebec;
+	font-family: itc-american-typewriter, serif;
+}
+
+h2 {
+	text-align: center;
+	font-size: 30px;
+}
+
+
+div {
+	margin: auto;
+    width: 60%;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.centerpic {
+	display: block;
+	margin: auto;
+	width: 50%;
+}
+
+
+
+button {
+	display: block;
+	margin: auto;
+	font-family: Helvetica;
+	font-weight: bold;
+	width: 250px;
+	height: 30px;
+	font-size: 15px;
+}
+</style>
+</head>
+<!--PLACE MY FONT HERE --><link rel="stylesheet" href="https://use.typekit.net/rre2nvs.css">
+	<!-- end font-->
+	
+<body onLoad="newQuote()">
+	<h2>Jim "Big Tuna" Halpert</h2>
+	<!--image-->
+	<!--UPLOAD IMAGES TO image.ibb.co--><div><img src="https://image.ibb.co/dTbmAL/jim-thumb.png" alt="jim-thumb" class="centerpic"></div>
+	
+	<!--end image-->
+	
+	<div id="quoteDisplay">
+		<!--Quotes will display here -->
+	</div>
+<!-- Center added for button placement -->
+	
+	<button onClick="newQuote()">Quote me up!</button>
+<!--Javascript -->	
+<script type="text/javascript">
+	var quotes = ["Stanley just drank OJ out of my mug and didn’t seem to realize that it wasn’t his hot coffee. So the question has to be asked, is there no limit to what he won’t notice?", 
+				  "Oh so Dwight gave me this wooden mallard as a gift. I found a recording device in it. Yes. So. I think if I play it just right, I can get Dwight to live out the plot of National Treasure.", 
+				  "My roommate wants to meet everybody. Because I'm pretty sure he thinks I'm making Dwight up. He is very real.",
+				 "I don't have a lot of contact with the Scranton branch, but before I left I took a box of Dwight's stationary. So from time to time, I send Dwight faxes... from himself... from the future.",
+				 "Last week, Dwight found half a joint in the parking lot. And as it turns out, Dwight finding drugs is more dangerous than most people using drugs.",
+				 " Fact: Bears eat beets. Bears. Beets. Battlestar Galactica.",
+				 "Right now this is just a job. If I advance any higher in this company, this would be my career. And, uh, if this were my career, I'd have to throw myself in front of a train.",
+				 "Four years ago, I was just a guy who had a crush on a girl who had a boyfriend. And I had to do the hardest thing I've ever had to do, which was just to wait. For a really long time that's all I had. I just had little moments with a girl who saw me as a friend. And a lot of people told me I was crazy to wait this long for a date with a girl who I worked with, but I think even then I knew that I was waiting for my wife.",
+				 "Yeah. Phyllis called me Michael. And I will always and forever be haunted by that fact.",
+				 "Everything I have I owe to this job...this stupid, wonderful, boring, amazing job."]
+	function newQuote() {
+		var randomNumber = Math.floor(Math.random() * (quotes.length));
+	document.getElementById('quoteDisplay').innerHTML=quotes[randomNumber];
+	}
+</script>
+</body>
+</html>

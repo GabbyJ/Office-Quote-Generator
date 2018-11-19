@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Quote Generator</title>
+<style>
+	body {
+	background-color: #e5ebec;
+	font-family: itc-american-typewriter, serif;
+}
+
+h2 {
+	text-align: center;
+	font-size: 30px;
+}
+
+
+div {
+	margin: auto;
+    width: 60%;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.centerpic {
+	display: block;
+	margin: auto;
+	width: 60%;
+}
+
+
+
+button {
+	display: block;
+	margin: auto;
+	font-family: Helvetica;
+	font-weight: bold;
+	width: 250px;
+	height: 30px;
+	font-size: 15px;
+}
+</style>
+</head>
+<!--PLACE MY FONT HERE --><link rel="stylesheet" href="https://use.typekit.net/rre2nvs.css">
+	<!-- end font-->
+	
+<body onLoad="newQuote()">
+<h2>Michael "World's Best Boss" Scott</h2>	
+	<!--image-->
+	<!--UPLOAD IMAGES TO image.ibb.co--><div><img src="https://image.ibb.co/jdYBc0/mike-thumb.png" alt="mike-thumb" class="centerpic"></div>
+	<!--end image-->
+	
+	<div id="quoteDisplay">
+		<!--Quotes will display here -->
+	</div>
+<!-- Center added for button placement -->
+	
+	<button onClick="newQuote()">Quote me up!</button>
+<!--Javascript -->	
+<script type="text/javascript">
+	var quotes = ["Wikipedia is the best thing ever. Anyone in the world can write anything they want about any subject. So you know you are getting the best possible information.", 
+				  "No, I'm not going to tell them about the downsizing. If a patient has cancer, you don't tell them.", 
+				  "Make friends first, make sales second, make love third. In no particular order.",
+				 "Sometimes I'll start a sentence and I don't even know where it's going. I just hope I find it along the way.",
+				 "Would I rather be feared or loved? Easy. Both. I want people to be afraid of how much they love me.",
+				 "I'm not superstitious but I am a little stitious.",
+				 "I am Beyonce, always."]
+	function newQuote() {
+		var randomNumber = Math.floor(Math.random() * (quotes.length));
+	document.getElementById('quoteDisplay').innerHTML=quotes[randomNumber];
+	}
+</script>
+</body>
+</html>

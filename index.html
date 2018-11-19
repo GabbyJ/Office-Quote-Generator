@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Quote Generator</title>
+<style>
+	body {
+	background-color: #e5ebec;
+	font-family: itc-american-typewriter, serif;
+}
+
+h1 {
+	text-align: center;
+	font-size: 50px;
+}
+p {
+	text-align: center;
+	font-size: 15px;
+	}
+
+
+div {
+	margin: auto;
+    width: 80%;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+	
+}
+
+.grouppic {
+	display: block;
+	margin: auto;
+	width: 80%;
+}
+	
+.grouppic img, .grouppic button{
+		width: 20%;
+	}
+/*Mike's is sized weird for some reason, so separate sizing*/
+	#mikepic{
+		width: 32%;
+	}
+	#couples{
+		float: right;
+  position:relative;
+  text-align: left;	
+	}
+
+	
+
+button {
+	display: block;
+	margin: 2%;
+	font-family: Helvetica;
+	font-weight: bold;
+	width: 150px;
+	height: 50px;
+	font-size: 15px;
+	float: left;
+	
+}
+
+/*Remove line and color from links */
+
+a:hover button{
+	color: #e5ebec;
+	background-color: black;
+}
+	footer{
+		font-family: itc-american-typewriter, serif;
+		text-align: right;
+		font-size: 10px;
+		margin-top: 50px;
+		clear: both;
+		
+	}
+</style>
+</head>
+<!--PLACE MY FONT HERE --><link rel="stylesheet" href="https://use.typekit.net/rre2nvs.css">
+	<!-- end font-->
+	
+<body>
+	<h1>The Office Quote Generator</h1>
+	<p>Pick a character and enjoy the joy of reading their best quotes!</p>
+	
+	<!--images-->
+	<!--UPLOAD IMAGES TO image.ibb.co--><div class="grouppic"><img src="https://image.ibb.co/fTyzVL/pam.png" alt="pam">
+	<img src="https://image.ibb.co/fKUjx0/jim.png" alt="jim" >
+	<img src="https://image.ibb.co/fora4f/dwight.png" alt="dwight" >
+	<img src="https://image.ibb.co/gVTzVL/mike.png" alt="mike" id="mikepic">
+	</div>
+	
+	<!--end image-->
+	
+
+<!-- buttons -->
+	
+	<div class="grouppic">
+		<a href="Pam.html"><button >Pam</button></a>
+		<a href="Jim.html"><button >Jim</button></a>
+		<a href="Dwight.html"><button >Dwight</button></a>
+		<a href="Michael.html"><button >Michael</button></a>
+		</div>
+<!-- couple buttons -->
+	<br>
+	<div class="grouppic" id="couples">
+		<a href="pamandjim.html"><button >Pam & Jim</button></a>
+		<a href="jimanddwight.html"><button >Jim & Dwight</button></a>
+		<a href="michaelanddwight.html"><button >Dwight & Michael</button></a>
+		</div>
+	<!-- end buttons -->
+<footer>Gabrielle's Quote Generator ©2018<br>Special thanks for most of the images to <a href="http://marisalivingston.tumblr.com/?ref_url=https://yesplz.co/the-office-cartoons-marisa-livingston/" target="_blank">Marisa J. Livingston</a></footer>
+</body>
+</html>

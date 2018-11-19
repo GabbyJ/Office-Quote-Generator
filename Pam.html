@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Quote Generator</title>
+<style>
+	body {
+	background-color: #e5ebec;
+	font-family: itc-american-typewriter, serif;
+}
+
+
+h2 {
+	text-align: center;
+	font-size: 30px;
+}
+
+
+div {
+	margin: auto;
+    width: 60%;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.centerpic {
+	display: block;
+	margin: auto;
+	width: 50%;
+}
+
+
+
+button {
+	display: block;
+	margin: auto;
+	font-family: Helvetica;
+	font-weight: bold;
+	width: 250px;
+	height: 30px;
+	font-size: 15px;
+}
+</style>
+</head>
+<!--PLACE MY FONT HERE --><link rel="stylesheet" href="https://use.typekit.net/rre2nvs.css">
+	<!-- end font-->
+	
+<body onLoad="newQuote()">
+	<h2>Pam "Pama-lama-ding-dong" Beesly</h2>
+	<!--image-->
+	<!--UPLOAD IMAGES TO image.ibb.co--><div><img src="https://image.ibb.co/gZKTPf/pam-thumb.png" alt="pam-thumb" class="centerpic"></div>
+	
+	<!--end image-->
+	
+	<div id="quoteDisplay">
+		<!--Quotes will display here -->
+	</div>
+<!-- Center added for button placement -->
+	
+	<button onClick="newQuote()">Quote me up!</button>
+<!--Javascript -->	
+<script type="text/javascript">
+	var quotes = ["Well I just wanna take a minute to talk to you all about something very serious. Once every hour, someone is involved in an internet scam. That man is Michael Scott. He's supporting about twenty Nigerian princesses.", 
+				  "I'm guessing Angela is the one in the neighborhood that gives the trick-or-treaters toothbrushes. Pennies. Walnuts.", 
+				  "I can tell Michael's mood by which comedy routine he chooses to do. The more infantile, the more upset he is. And he just skipped the Ace Ventura talking butt thing. He never skips it. This is bad.",
+				 "You know what they say about a car wreck, where it's so awful you can't look away? The Dundies are like a car wreck that you want to look away from but you have to stare at it because your boss is making you.",
+				 "This was tough. I suggested we flip a coin, but Angela said she doesn't like to gamble. Of course, by saying that, she was gambling that I wouldn't smack her.",
+				 'I learned from Jim, if Dwight ever asks you if you accept something secret, you reply, "absolutely I do."',
+				 "I think an ordinary paper company like Dunder-Mifflin was a great subject for a documentary. There's a lot of beauty in ordinary things. Isn't that kind of the point?",
+				 "You can't be scared of a room full of Jims. I love the guy but he's basically Gumby with hair.",
+				 "At its worst it was a toxic, political club used to make others feel miserable and left out. At its best, it planned parties."]
+	function newQuote() {
+		var randomNumber = Math.floor(Math.random() * (quotes.length));
+	document.getElementById('quoteDisplay').innerHTML=quotes[randomNumber];
+	}
+</script>
+</body>
+</html>

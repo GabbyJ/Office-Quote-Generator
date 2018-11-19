@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Quote Generator</title>
+<style>
+	body {
+	background-color: #e5ebec;
+	font-family: itc-american-typewriter, serif;
+}
+
+h2 {
+	text-align: center;
+	font-size: 30px;
+}
+
+
+div {
+	margin: auto;
+    width: 60%;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.centerpic {
+	display: block;
+	margin: auto;
+	width: 70%;
+}
+
+
+
+button {
+	display: block;
+	margin: auto;
+	font-family: Helvetica;
+	font-weight: bold;
+	width: 250px;
+	height: 30px;
+	font-size: 15px;
+}
+</style>
+</head>
+<!--PLACE MY FONT HERE --><link rel="stylesheet" href="https://use.typekit.net/rre2nvs.css">
+	<!-- end font-->
+	
+<body onLoad="newQuote()">
+	<h2>Jim and Dwight<br>a.k.a. Secretly best buds</h2>
+	<!--image-->
+	<!--UPLOAD IMAGES TO image.ibb.co--><div><img src="https://image.ibb.co/kcdmUf/dwightjim.png" alt="dwight and jim" class="centerpic"></div>
+	
+	<!--end image-->
+	
+	<div id="quoteDisplay">
+		<!--Quotes will display here -->
+	</div>
+<!-- Center added for button placement -->
+	
+	<button onClick="newQuote()">Quote me up!</button>
+<!--Javascript -->	
+<script type="text/javascript">
+	var quotes = ["Dwight: I'm going to be your new boss. It's my greatest dream come true. Welcome to Hotel Hell. Check-in time is now, checkout time is never.<br><br>Jim: Can I change rooms?<br><br>Dwight: Sorry, we're all booked up. Hell convention in town. We'll have to talk to the manager.<br><br>Jim: You're not the manager? Even in your own fantasy?",
+				  "Dwight: How do I look?<br><br>Jim: Amazing. How do I look?<br><br>Dwight: Normal. Ugly.",
+				  "Dwight: Everyone has called me 'Dwayne' all day. I think Jim Halpert paid them.<br><br>Jim: Yes. $5 each, and it was totally worth it.",
+				  "Jim: We can say we're the tour manager for Justin Bieber and we're giving away free tickets.<br><br>Dwight: Who is Justice Beaver?<br><br>Jim: It's a crime fighting beaver.",
+				  "Dwight: You're pre-fired. And when I'm promoted you'll be full fired.<br><br>Jim: IF you get promoted, and if you haven't fallen in love with me by then.<br><br>Dwight: What?!",
+				  "Dwight: What's your daughter's name again? Peepee?<br><br>Jim: Peepa.<br>(His kid's name is CeeCee)",
+				  "Jim: Question. What kind of bear is best?<br><br>Dwight: That's a ridiculous question.<br><br>Jim: False! Black Bear. Bears. Beets. Battlestar Galactica.<br><br>Dwight: Bears do not... what is going on?! What are you doing?!"
+				  ]
+	function newQuote() {
+		var randomNumber = Math.floor(Math.random() * (quotes.length));
+	document.getElementById('quoteDisplay').innerHTML=quotes[randomNumber];
+	}
+</script>
+</body>
+</html>

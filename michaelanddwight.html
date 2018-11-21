@@ -70,6 +70,12 @@ button {
 	function newQuote() {
 		var randomNumber = Math.floor(Math.random() * (quotes.length));
 	document.getElementById('quoteDisplay').innerHTML=quotes[randomNumber];
+	/*Random pastel colors*/
+		var pastelHSL = "hsl(" + 360 * Math.random() + ',' +
+                 (25 + 70 * Math.random()) + '%,' + 
+                 (85 + 10 * Math.random()) + '%)';
+
+	document.body.style.backgroundColor = pastelHSL;
 	}
 </script>
 </body>
